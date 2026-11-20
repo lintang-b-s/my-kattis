@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
+import { CodeViewerModal } from "@/components/CodeViewerModal";
 import {
   filterAndSortProblems,
   formatDifficulty,
@@ -9,6 +10,7 @@ import {
 } from "@/lib/table-utils";
 import type {
   KattisSolutionsData,
+  SolvedProblem,
   SortDirection,
   SortKey,
 } from "@/types/kattis";
@@ -16,16 +18,26 @@ import type {
 interface SolutionsViewProps {
   initialData: KattisSolutionsData | null;
   configuredUsername: string;
+  availableCodeByProblem?: Record<string, string[]>;
 }
 
 export function SolutionsView({
   initialData,
   configuredUsername,
+  availableCodeByProblem = {},
 }: SolutionsViewProps) {
   const data = initialData;
   const [query, setQuery] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDirection>("asc");
+  const [selectedCode, setSelectedCode] = useState<{
+    problem: SolvedProblem;
+    language: string;
+  } | null>(null);
+
+  const handleCloseCodeModal = useCallback(() => {
+    setSelectedCode(null);
+  }, []);
 
   const displayUsername = data?.username || configuredUsername;
   const profileUrl =
@@ -230,6 +242,7 @@ export function SolutionsView({
                 const firstAcceptedWib = formatFirstAcceptedWib(
                   problem.firstAcceptedAt,
                 );
+                const availableLangs = availableCodeByProblem[problem.id] ?? [];
                 return (
                   <tr
                     key={problem.id}
@@ -257,14 +270,34 @@ export function SolutionsView({
                     <td className="px-4 py-3 text-neutral-700">
                       {problem.languages.length > 0 ? (
                         <div className="flex flex-wrap gap-1.5">
-                          {problem.languages.map((lang) => (
-                            <span
-                              key={lang}
-                              className="inline-block rounded bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-700"
-                            >
-                              {lang}
-                            </span>
-                          ))}
+                          {problem.languages.map((lang) => {
+                            const hasCode = availableLangs.includes(lang);
+                            if (hasCode) {
+                              return (
+                                <button
+                                  key={lang}
+                                  type="button"
+                                  onClick={() =>
+                                    setSelectedCode({ problem, language: lang })
+                                  }
+                                  title={`View ${lang} solution code`}
+                                  aria-label={`View ${lang} solution code for ${problem.name}`}
+                                  className="inline-block cursor-pointer rounded bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-200 transition-colors hover:bg-blue-100 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                                >
+                                  {lang}
+                                </button>
+                              );
+                            }
+                            return (
+                              <span
+                                key={lang}
+                                title="Solution code not uploaded yet"
+                                className="inline-block rounded bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-500"
+                              >
+                                {lang}
+                              </span>
+                            );
+                          })}
                         </div>
                       ) : (
                         ""
@@ -286,6 +319,12 @@ export function SolutionsView({
           </tbody>
         </table>
       </div>
+
+      <CodeViewerModal
+        problem={selectedCode?.problem ?? null}
+        language={selectedCode?.language ?? null}
+        onClose={handleCloseCodeModal}
+      />
     </main>
   );
 }
