@@ -277,7 +277,7 @@ public:
         return search(root, v);
     }
 
-    // explanation of this order statistic (AVL) tree can be found in the CLRS book (Introduction to algorithms ) 3rd edition chapter 14.1
+    // explanation of this order statistic (AVL) tree can be found in the CLRS book (Introduction to algorithms) 3rd edition chapter 14.1
     // the book describes augmenting red-black tree for order statistics operations, but it actually similiar for augmenting AVL tree, as both are BST
     // ---  ranking problem ---
     int getLeftSubtreeSize(BSTVertex *T, ll key)
@@ -295,8 +295,8 @@ public:
             // key > T.key, then we recurse on the right subtree, bcs this is a BST
             // also we return rank of node key within the subtree rooted at T
             auto r = getSize(T->left) + 1;
-            auto c_size = getLeftSubtreeSize(T->right, key);
-            return r + c_size;
+            auto c_rank = getLeftSubtreeSize(T->right, key);
+            return r + c_rank;
         }
     }
 
