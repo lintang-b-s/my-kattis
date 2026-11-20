@@ -1,7 +1,7 @@
 {
   "username": "lintang-bs",
   "profileUrl": "https://open.kattis.com/users/lintang-bs",
-  "fetchedAt": "2026-11-20T08:51:12.635613+00:00",
+  "fetchedAt": "2026-11-20T21:29:09.921653+00:00",
   "problems": [
     {
       "id": "classy",
@@ -332,6 +332,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2025-12-12T11:41:14+07:00"
+    },
+    {
+      "id": "closestpair1",
+      "name": "Closest Pair (Uniform)",
+      "link": "https://open.kattis.com/problems/closestpair1",
+      "difficulty": 3.4,
+      "category": "9.clos, Closest Pair",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-21T03:45:55+07:00"
     },
     {
       "id": "closestsums",
@@ -839,6 +850,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2026-07-10T22:23:00+07:00"
+    },
+    {
+      "id": "golf",
+      "name": "Golf",
+      "link": "https://open.kattis.com/problems/golf",
+      "difficulty": 4.4,
+      "category": "2.3k, Order Statistics Tree",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-21T01:25:41+07:00"
     },
     {
       "id": "golombrulers",
