@@ -1,7 +1,7 @@
 {
   "username": "lintang-bs",
   "profileUrl": "https://open.kattis.com/users/lintang-bs",
-  "fetchedAt": "2026-11-20T21:49:03.673766+00:00",
+  "fetchedAt": "2026-11-20T23:48:19.160349+00:00",
   "problems": [
     {
       "id": "classy",
@@ -40,7 +40,7 @@
       "id": "abinitio",
       "name": "Ab Initio",
       "link": "https://open.kattis.com/problems/abinitio",
-      "difficulty": 6.0,
+      "difficulty": 6.1,
       "category": "2.4a, Graph Data Structures",
       "languages": [
         "C++"
@@ -337,7 +337,7 @@
       "id": "closestpair2",
       "name": "Closest Pair",
       "link": "https://open.kattis.com/problems/closestpair2",
-      "difficulty": 5.2,
+      "difficulty": 5.3,
       "category": "",
       "languages": [
         "C++"
@@ -546,7 +546,7 @@
       "id": "dominos",
       "name": "Dominos",
       "link": "https://open.kattis.com/problems/dominos",
-      "difficulty": 3.1,
+      "difficulty": 3.2,
       "category": "4.2g, Finding SCCs",
       "languages": [
         "C++"
@@ -767,7 +767,7 @@
       "id": "foosball",
       "name": "Foosball Dynasty",
       "link": "https://open.kattis.com/problems/foosball",
-      "difficulty": 5.1,
+      "difficulty": 5.0,
       "category": "2.2o, List/Queue/Deque",
       "languages": [
         "C++"
@@ -800,7 +800,7 @@
       "id": "fruitbaskets",
       "name": "Fruit Baskets",
       "link": "https://open.kattis.com/problems/fruitbaskets",
-      "difficulty": 3.8,
+      "difficulty": 3.7,
       "category": "3.2n, Backtracking, Harder",
       "languages": [
         "C++"
@@ -965,7 +965,7 @@
       "id": "heirsdilemma",
       "name": "Heir's Dilemma",
       "link": "https://open.kattis.com/problems/heirsdilemma",
-      "difficulty": 1.4,
+      "difficulty": 1.5,
       "category": "3.2h, Try All Answers",
       "languages": [
         "C++"
@@ -1119,7 +1119,7 @@
       "id": "walls",
       "name": "Lifting Walls",
       "link": "https://open.kattis.com/problems/walls",
-      "difficulty": 3.6,
+      "difficulty": 3.7,
       "category": "3.2h, Try All Answers",
       "languages": [
         "C++"
