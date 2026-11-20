@@ -1,0 +1,27 @@
+{
+  "name": "kattis-solutions-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "sync": "python3 scripts/fetch_kattis.py --output data/kattis-solutions.json",
+    "test": "vitest run",
+    "test:py": "python3 -m unittest discover -s scripts -p 'test_*.py' -v"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}

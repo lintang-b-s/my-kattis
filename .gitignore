@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+.env.*.local
+data/kattis-solutions.json
+__pycache__/
+*.pyc
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
