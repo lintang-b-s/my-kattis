@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import {
   filterAndSortProblems,
@@ -16,26 +16,16 @@ import type {
 interface SolutionsViewProps {
   initialData: KattisSolutionsData | null;
   configuredUsername: string;
-  hasEnvCredentials: boolean;
 }
 
 export function SolutionsView({
   initialData,
   configuredUsername,
-  hasEnvCredentials,
 }: SolutionsViewProps) {
-  const [data, setData] = useState<KattisSolutionsData | null>(initialData);
+  const data = initialData;
   const [query, setQuery] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDirection>("asc");
-
-  const [syncing, setSyncing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [showAuthForm, setShowAuthForm] = useState(
-    !initialData && !hasEnvCredentials,
-  );
-  const [usernameInput, setUsernameInput] = useState(configuredUsername);
-  const [passwordInput, setPasswordInput] = useState("");
 
   const displayUsername = data?.username || configuredUsername;
   const profileUrl =
@@ -64,44 +54,6 @@ export function SolutionsView({
     return sortDir === "asc" ? " ↑" : " ↓";
   }
 
-  async function triggerSync(credentials?: {
-    username: string;
-    password: string;
-  }) {
-    setSyncing(true);
-    setError(null);
-    try {
-      const response = await fetch("/api/sync", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(credentials ?? {}),
-      });
-      const json = await response.json();
-      if (!response.ok) {
-        throw new Error(json.error || "Failed to sync with Open Kattis.");
-      }
-      setData(json as KattisSolutionsData);
-      setPasswordInput("");
-      setShowAuthForm(false);
-    } catch (err) {
-      setError((err as Error).message);
-    } finally {
-      setSyncing(false);
-    }
-  }
-
-  async function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (!usernameInput.trim() || !passwordInput) {
-      setError("Please enter both your Open Kattis username and password.");
-      return;
-    }
-    await triggerSync({
-      username: usernameInput.trim(),
-      password: passwordInput,
-    });
-  }
-
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <header className="mb-8 flex flex-col gap-4 border-b border-neutral-200 pb-6 sm:flex-row sm:items-end sm:justify-between">
@@ -120,86 +72,21 @@ export function SolutionsView({
                 {displayUsername}
               </a>
             ) : (
-              <span className="text-neutral-500">
-                Not synced yet — connect your Open Kattis account below
-              </span>
+              <span className="text-neutral-500">Not synced yet</span>
             )}
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
-          {data && (
+        {data && (
+          <div className="flex items-center gap-3">
             <span className="text-sm text-neutral-500">
               {problems.length === data.problems.length
                 ? `${data.problems.length} solved`
                 : `${problems.length} of ${data.problems.length} solved`}
             </span>
-          )}
-          <button
-            type="button"
-            disabled={syncing}
-            onClick={() => {
-              if (hasEnvCredentials) {
-                void triggerSync();
-              } else {
-                setShowAuthForm((prev) => !prev);
-              }
-            }}
-            className="rounded-md border border-neutral-300 bg-white px-3.5 py-1.5 text-sm font-medium text-neutral-700 shadow-xs transition hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {syncing ? "Syncing..." : "Sync"}
-          </button>
-        </div>
-      </header>
-
-      {error && (
-        <div
-          role="alert"
-          className="mb-6 rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
-        >
-          {error}
-        </div>
-      )}
-
-      {showAuthForm && (
-        <form
-          onSubmit={handleFormSubmit}
-          className="mb-6 rounded-lg border border-neutral-200 bg-white p-4 shadow-xs"
-        >
-          <p className="mb-3 text-sm text-neutral-600">
-            Sign in with your Open Kattis credentials to fetch your solved
-            problems via <code className="font-mono text-xs">autokattis</code>{" "}
-            (or set <code className="font-mono text-xs">KATTIS_USERNAME</code>{" "}
-            and <code className="font-mono text-xs">KATTIS_PASSWORD</code> in{" "}
-            <code className="font-mono text-xs">web/.env.local</code>).
-          </p>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <input
-              type="text"
-              value={usernameInput}
-              onChange={(e) => setUsernameInput(e.target.value)}
-              placeholder="Kattis username or email"
-              autoComplete="username"
-              className="flex-1 rounded-md border border-neutral-300 px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
-            />
-            <input
-              type="password"
-              value={passwordInput}
-              onChange={(e) => setPasswordInput(e.target.value)}
-              placeholder="Kattis password"
-              autoComplete="current-password"
-              className="flex-1 rounded-md border border-neutral-300 px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
-            />
-            <button
-              type="submit"
-              disabled={syncing}
-              className="rounded-md bg-neutral-900 px-4 py-1.5 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:opacity-50"
-            >
-              {syncing ? "Fetching..." : "Fetch Solutions"}
-            </button>
           </div>
-        </form>
-      )}
+        )}
+      </header>
 
       <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <input
@@ -335,7 +222,7 @@ export function SolutionsView({
                     ? data.problems.length === 0
                       ? "No solved problems found for this account yet."
                       : "No problems match your filter."
-                    : "No solved problems loaded yet. Click Sync to fetch your Open Kattis solutions."}
+                    : "No solved problems loaded yet."}
                 </td>
               </tr>
             ) : (

@@ -4,7 +4,6 @@ out/
 .env
 .env.local
 .env.*.local
-data/kattis-solutions.json
 __pycache__/
 *.pyc
 *.tsbuildinfo
