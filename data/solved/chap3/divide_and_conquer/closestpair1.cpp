@@ -49,10 +49,10 @@ pair<point, point> pecah_belah_dan_kuasai(vector<point> &px, vector<point> &py)
         return best_pair;
     }
 
-    // qx and qy are first n/2 points of px and py
+    // qx and qy are first n/2 points of px (sorted by x-coordinate and y-coordinate respectively)
     int mid = n / 2;
     vector<point> qx(px.begin(), px.begin() + mid);
-    // rx and ry are last n/2 points of px and py
+    // rx and ry are last n/2 points of px (sorted by x-coordinate and y-coordinate respectively)
     vector<point> rx(px.begin() + mid, px.begin() + n);
 
     for (auto p : qx)
@@ -96,7 +96,7 @@ pair<point, point> pecah_belah_dan_kuasai(vector<point> &px, vector<point> &py)
 
     int s_size = 0;
     for (int i = 0; i < s.size(); i++) // O(n)
-    {                                  // only retains all points within distance delta of line x=x_star into vector s
+    {                                  // only retains all s points within distance delta from line x=x_star 
         auto p = s[i];
         point x_star_line = point{p.id, x_star, p.y};
         auto p_xstar_dist = euclidean(p, x_star_line);
@@ -109,9 +109,9 @@ pair<point, point> pecah_belah_dan_kuasai(vector<point> &px, vector<point> &py)
 
     pair<point, point> best_s_pair;
     double min_s_dist = 1e15;
-    // for each points in s, compute distance from s to each of next 15 points in s
+    // for each points in s, compute distance from this point to each of next 15 points in s
     // s already sorted by y-coordinate
-    for (int i = 0; i < s_size; i++)
+    for (int i = 0; i < s_size; i++) // O(n)
     {
         for (int j = i + 1; j < min(s_size, i + 15); j++)
         {
