@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+// https://open.kattis.com/problems/closestpair1
 
 struct point
 {
@@ -111,6 +112,11 @@ pair<point, point> pecah_belah_dan_kuasai(vector<point> &px, vector<point> &py)
     double min_s_dist = 1e15;
     // for each points in s, compute distance from this point to each of next 15 points in s
     // s already sorted by y-coordinate
+    // we only need to check each of next 15 points from this points in s because 
+    // in proposition (5.10) in Algorithm Design book 1st edition by Kleinberg and tardos,
+    // if we check the 16-th (position) point from this points in s (that already sorted by its y-coordinate)
+    // we got that the distance between this point and the 16-th (position) point is at least 3/2*delta
+    // which is contradict that we want to find best pair of point around line x=x_star that has distance at most delta 
     for (int i = 0; i < s_size; i++) // O(n)
     {
         for (int j = i + 1; j < min(s_size, i + 15); j++)
