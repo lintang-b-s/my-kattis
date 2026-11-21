@@ -1,7 +1,7 @@
 {
   "username": "lintang-bs",
   "profileUrl": "https://open.kattis.com/users/lintang-bs",
-  "fetchedAt": "2026-11-21T06:19:11.083133+00:00",
+  "fetchedAt": "2026-11-21T15:11:32.590626+00:00",
   "problems": [
     {
       "id": "classy",
@@ -35,6 +35,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2026-01-02T18:19:43+07:00"
+    },
+    {
+      "id": "a1paper",
+      "name": "A1 Paper",
+      "link": "https://open.kattis.com/problems/a1paper",
+      "difficulty": 4.7,
+      "category": "3.3c, Ternary Search & Others",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-21T20:19:20+07:00"
     },
     {
       "id": "abinitio",
@@ -1642,6 +1653,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2026-08-09T17:48:37+07:00"
+    },
+    {
+      "id": "sylvester",
+      "name": "Sylvester Construction",
+      "link": "https://open.kattis.com/problems/sylvester",
+      "difficulty": 2.0,
+      "category": "3.3c, Ternary Search & Others",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-21T18:17:51+07:00"
     },
     {
       "id": "tautology",
