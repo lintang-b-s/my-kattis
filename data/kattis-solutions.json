@@ -1,7 +1,7 @@
 {
   "username": "lintang-bs",
   "profileUrl": "https://open.kattis.com/users/lintang-bs",
-  "fetchedAt": "2026-11-20T23:48:19.160349+00:00",
+  "fetchedAt": "2026-11-21T06:19:11.083133+00:00",
   "problems": [
     {
       "id": "classy",
@@ -1587,6 +1587,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2026-01-10T15:35:12+07:00"
+    },
+    {
+      "id": "sretan",
+      "name": "Sretan",
+      "link": "https://open.kattis.com/problems/sretan",
+      "difficulty": 2.5,
+      "category": "3.3c, Ternary Search & Others",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-21T12:54:08+07:00"
     },
     {
       "id": "stockprices",
