@@ -1,7 +1,7 @@
 {
   "username": "lintang-bs",
   "profileUrl": "https://open.kattis.com/users/lintang-bs",
-  "fetchedAt": "2026-11-21T15:11:32.590626+00:00",
+  "fetchedAt": "2026-11-21T16:10:22.577376+00:00",
   "problems": [
     {
       "id": "classy",
@@ -1158,6 +1158,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2026-01-31T12:39:26+07:00"
+    },
+    {
+      "id": "megainversions",
+      "name": "Mega Inversions",
+      "link": "https://open.kattis.com/problems/megainversions",
+      "difficulty": 2.1,
+      "category": "8.7h, Mathematics+Other",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-21T23:01:08+07:00"
     },
     {
       "id": "mjehuric",
