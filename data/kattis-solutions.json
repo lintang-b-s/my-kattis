@@ -1,7 +1,7 @@
 {
   "username": "lintang-bs",
   "profileUrl": "https://open.kattis.com/users/lintang-bs",
-  "fetchedAt": "2026-11-21T16:10:22.577376+00:00",
+  "fetchedAt": "2026-11-23T22:07:07.032908+00:00",
   "problems": [
     {
       "id": "classy",
@@ -37,10 +37,21 @@
       "firstAcceptedAt": "2026-01-02T18:19:43+07:00"
     },
     {
+      "id": "aplusb",
+      "name": "A+B Problem",
+      "link": "https://open.kattis.com/problems/aplusb",
+      "difficulty": 5.2,
+      "category": "",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-23T18:02:36+07:00"
+    },
+    {
       "id": "a1paper",
       "name": "A1 Paper",
       "link": "https://open.kattis.com/problems/a1paper",
-      "difficulty": 4.7,
+      "difficulty": 4.6,
       "category": "3.3c, Ternary Search & Others",
       "languages": [
         "C++"
@@ -51,7 +62,7 @@
       "id": "abinitio",
       "name": "Ab Initio",
       "link": "https://open.kattis.com/problems/abinitio",
-      "difficulty": 6.1,
+      "difficulty": 6.0,
       "category": "2.4a, Graph Data Structures",
       "languages": [
         "C++"
@@ -348,7 +359,7 @@
       "id": "closestpair2",
       "name": "Closest Pair",
       "link": "https://open.kattis.com/problems/closestpair2",
-      "difficulty": 5.3,
+      "difficulty": 5.1,
       "category": "",
       "languages": [
         "C++"
@@ -359,7 +370,7 @@
       "id": "closestpair1",
       "name": "Closest Pair (Uniform)",
       "link": "https://open.kattis.com/problems/closestpair1",
-      "difficulty": 3.4,
+      "difficulty": 3.3,
       "category": "9.clos, Closest Pair",
       "languages": [
         "C++"
@@ -370,7 +381,7 @@
       "id": "closestsums",
       "name": "Closest Sums",
       "link": "https://open.kattis.com/problems/closestsums",
-      "difficulty": 2.0,
+      "difficulty": 2.1,
       "category": "3.2b, Iterative (Two Loops), E",
       "languages": [
         "C++"
@@ -447,7 +458,7 @@
       "id": "convexhull",
       "name": "Convex Hull",
       "link": "https://open.kattis.com/problems/convexhull",
-      "difficulty": 2.4,
+      "difficulty": 2.3,
       "category": "7.3a, Polygon, Easier",
       "languages": [
         "C++"
@@ -557,7 +568,7 @@
       "id": "dominos",
       "name": "Dominos",
       "link": "https://open.kattis.com/problems/dominos",
-      "difficulty": 3.2,
+      "difficulty": 3.6,
       "category": "4.2g, Finding SCCs",
       "languages": [
         "C++"
@@ -678,7 +689,7 @@
       "id": "fenwick",
       "name": "Fenwick Tree",
       "link": "https://open.kattis.com/problems/fenwick",
-      "difficulty": 3.5,
+      "difficulty": 3.4,
       "category": "2.4c, Tree-related DS",
       "languages": [
         "C++"
@@ -800,7 +811,7 @@
       "id": "froshweek",
       "name": "Frosh Week",
       "link": "https://open.kattis.com/problems/froshweek",
-      "difficulty": 3.2,
+      "difficulty": 3.3,
       "category": "2.2i, Special Sorting",
       "languages": [
         "C++"
@@ -811,7 +822,7 @@
       "id": "fruitbaskets",
       "name": "Fruit Baskets",
       "link": "https://open.kattis.com/problems/fruitbaskets",
-      "difficulty": 3.7,
+      "difficulty": 3.8,
       "category": "3.2n, Backtracking, Harder",
       "languages": [
         "C++"
@@ -883,6 +894,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2026-11-21T01:25:41+07:00"
+    },
+    {
+      "id": "golfbot",
+      "name": "Golf Bot",
+      "link": "https://open.kattis.com/problems/golfbot",
+      "difficulty": 5.4,
+      "category": "9.fast, Fast Fourier Trans",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-23T21:10:36+07:00"
     },
     {
       "id": "golombrulers",
@@ -965,7 +987,7 @@
       "id": "height",
       "name": "Height Ordering",
       "link": "https://open.kattis.com/problems/height",
-      "difficulty": 1.5,
+      "difficulty": 1.6,
       "category": "2.2f, Sorting, Easier",
       "languages": [
         "C++"
@@ -1020,7 +1042,7 @@
       "id": "joinstrings",
       "name": "Join Strings",
       "link": "https://open.kattis.com/problems/joinstrings",
-      "difficulty": 3.9,
+      "difficulty": 4.0,
       "category": "2.2o, List/Queue/Deque",
       "languages": [
         "C++"
@@ -1097,7 +1119,7 @@
       "id": "excursion",
       "name": "Kindergarten Excursion",
       "link": "https://open.kattis.com/problems/excursion",
-      "difficulty": 3.1,
+      "difficulty": 3.2,
       "category": "2.2i, Special Sorting",
       "languages": [
         "C++"
@@ -1185,7 +1207,7 @@
       "id": "moviecollection",
       "name": "Movie Collection",
       "link": "https://open.kattis.com/problems/moviecollection",
-      "difficulty": 3.0,
+      "difficulty": 2.9,
       "category": "2.4c, Tree-related DS",
       "languages": [
         "C++"
@@ -1240,7 +1262,7 @@
       "id": "numbertree",
       "name": "Numbers On a Tree",
       "link": "https://open.kattis.com/problems/numbertree",
-      "difficulty": 2.0,
+      "difficulty": 2.1,
       "category": "2.3a, Priority Queue",
       "languages": [
         "C++"
@@ -1336,6 +1358,28 @@
       "firstAcceptedAt": "2026-06-25T15:38:58+07:00"
     },
     {
+      "id": "polymul1",
+      "name": "Polynomial Multiplication 1",
+      "link": "https://open.kattis.com/problems/polymul1",
+      "difficulty": 1.7,
+      "category": "5.2h, Polynomial",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-23T18:53:47+07:00"
+    },
+    {
+      "id": "polymul2",
+      "name": "Polynomial Multiplication 2",
+      "link": "https://open.kattis.com/problems/polymul2",
+      "difficulty": 4.5,
+      "category": "9.fast, Fast Fourier Trans",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-23T18:50:54+07:00"
+    },
+    {
       "id": "quickbrownfox",
       "name": "Quick Brown Fox",
       "link": "https://open.kattis.com/problems/quickbrownfox",
@@ -1405,7 +1449,7 @@
       "id": "roberthood",
       "name": "Robert Hood",
       "link": "https://open.kattis.com/problems/roberthood",
-      "difficulty": 2.8,
+      "difficulty": 2.6,
       "category": "7.3b, Polygon, Harder",
       "languages": [
         "C++"
@@ -1504,7 +1548,7 @@
       "id": "sim",
       "name": "Sim",
       "link": "https://open.kattis.com/problems/sim",
-      "difficulty": 2.8,
+      "difficulty": 2.9,
       "category": "2.2o, List/Queue/Deque",
       "languages": [
         "C++"
@@ -1526,7 +1570,7 @@
       "id": "shortestpath2",
       "name": "Single source shortest path, time table",
       "link": "https://open.kattis.com/problems/shortestpath2",
-      "difficulty": 2.2,
+      "difficulty": 2.1,
       "category": "4.4e, SSSP, Dijkstra, Easier",
       "languages": [
         "C++"
@@ -1823,7 +1867,7 @@
       "id": "ultraquicksort",
       "name": "Ultra-QuickSort",
       "link": "https://open.kattis.com/problems/ultraquicksort",
-      "difficulty": 4.0,
+      "difficulty": 4.1,
       "category": "2.2i, Special Sorting",
       "languages": [
         "C++"
@@ -1900,7 +1944,7 @@
       "id": "worstweather",
       "name": "Worst Weather Ever",
       "link": "https://open.kattis.com/problems/worstweather",
-      "difficulty": 6.3,
+      "difficulty": 6.1,
       "category": "2.4c, Tree-related DS",
       "languages": [
         "C++"
