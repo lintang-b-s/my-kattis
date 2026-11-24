@@ -1,7 +1,7 @@
 {
   "username": "lintang-bs",
   "profileUrl": "https://open.kattis.com/users/lintang-bs",
-  "fetchedAt": "2026-11-23T22:07:07.032908+00:00",
+  "fetchedAt": "2026-11-24T09:34:23.642318+00:00",
   "problems": [
     {
       "id": "classy",
@@ -326,7 +326,7 @@
       "id": "cd",
       "name": "CD",
       "link": "https://open.kattis.com/problems/cd",
-      "difficulty": 2.1,
+      "difficulty": 2.2,
       "category": "2.3d, Hash Table (set), E",
       "languages": [
         "C++"
@@ -359,7 +359,7 @@
       "id": "closestpair2",
       "name": "Closest Pair",
       "link": "https://open.kattis.com/problems/closestpair2",
-      "difficulty": 5.1,
+      "difficulty": 5.2,
       "category": "",
       "languages": [
         "C++"
@@ -689,7 +689,7 @@
       "id": "fenwick",
       "name": "Fenwick Tree",
       "link": "https://open.kattis.com/problems/fenwick",
-      "difficulty": 3.4,
+      "difficulty": 3.3,
       "category": "2.4c, Tree-related DS",
       "languages": [
         "C++"
@@ -717,6 +717,17 @@
         "C++"
       ],
       "firstAcceptedAt": "2025-12-13T17:36:56+07:00"
+    },
+    {
+      "id": "figurinefigures",
+      "name": "Figurine Figures",
+      "link": "https://open.kattis.com/problems/figurinefigures",
+      "difficulty": 6.9,
+      "category": "",
+      "languages": [
+        "C++"
+      ],
+      "firstAcceptedAt": "2026-11-24T16:27:04+07:00"
     },
     {
       "id": "financialplanning",
@@ -833,7 +844,7 @@
       "id": "gcpc",
       "name": "Galactic Collegiate Programming Contest",
       "link": "https://open.kattis.com/problems/gcpc",
-      "difficulty": 4.7,
+      "difficulty": 4.6,
       "category": "2.3k, Order Statistics Tree",
       "languages": [
         "C++"
@@ -987,7 +998,7 @@
       "id": "height",
       "name": "Height Ordering",
       "link": "https://open.kattis.com/problems/height",
-      "difficulty": 1.6,
+      "difficulty": 1.5,
       "category": "2.2f, Sorting, Easier",
       "languages": [
         "C++"
@@ -1042,7 +1053,7 @@
       "id": "joinstrings",
       "name": "Join Strings",
       "link": "https://open.kattis.com/problems/joinstrings",
-      "difficulty": 4.0,
+      "difficulty": 3.9,
       "category": "2.2o, List/Queue/Deque",
       "languages": [
         "C++"
@@ -1097,7 +1108,7 @@
       "id": "justforsidekicks",
       "name": "Just for Sidekicks",
       "link": "https://open.kattis.com/problems/justforsidekicks",
-      "difficulty": 2.5,
+      "difficulty": 2.6,
       "category": "2.4c, Tree-related DS",
       "languages": [
         "C++"
@@ -1119,7 +1130,7 @@
       "id": "excursion",
       "name": "Kindergarten Excursion",
       "link": "https://open.kattis.com/problems/excursion",
-      "difficulty": 3.2,
+      "difficulty": 3.1,
       "category": "2.2i, Special Sorting",
       "languages": [
         "C++"
@@ -1207,7 +1218,7 @@
       "id": "moviecollection",
       "name": "Movie Collection",
       "link": "https://open.kattis.com/problems/moviecollection",
-      "difficulty": 2.9,
+      "difficulty": 2.8,
       "category": "2.4c, Tree-related DS",
       "languages": [
         "C++"
@@ -1262,7 +1273,7 @@
       "id": "numbertree",
       "name": "Numbers On a Tree",
       "link": "https://open.kattis.com/problems/numbertree",
-      "difficulty": 2.1,
+      "difficulty": 2.0,
       "category": "2.3a, Priority Queue",
       "languages": [
         "C++"
@@ -1548,7 +1559,7 @@
       "id": "sim",
       "name": "Sim",
       "link": "https://open.kattis.com/problems/sim",
-      "difficulty": 2.9,
+      "difficulty": 2.8,
       "category": "2.2o, List/Queue/Deque",
       "languages": [
         "C++"
@@ -1746,7 +1757,7 @@
       "id": "texassummers",
       "name": "Texas Summers",
       "link": "https://open.kattis.com/problems/texassummers",
-      "difficulty": 3.4,
+      "difficulty": 3.2,
       "category": "4.4e, SSSP, Dijkstra, Easier",
       "languages": [
         "C++"
@@ -1944,7 +1955,7 @@
       "id": "worstweather",
       "name": "Worst Weather Ever",
       "link": "https://open.kattis.com/problems/worstweather",
-      "difficulty": 6.1,
+      "difficulty": 5.5,
       "category": "2.4c, Tree-related DS",
       "languages": [
         "C++"
