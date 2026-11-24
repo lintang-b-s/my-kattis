@@ -16,7 +16,7 @@ double bsta_sag_jembatan(double d, double s)
     double a = 0;
 
     for (int i = 0; i < 100000; i++)
-    { // O(1)
+    { // O(log(hi-lo))
         double mid = (low + high) / 2;
         double coba_sag = hitung_sag(d, mid);
         if (coba_sag >= s)

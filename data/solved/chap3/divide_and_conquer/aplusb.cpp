@@ -11,7 +11,7 @@ const double PI = acos(-1);
 // fft fast fourier transform
 // computes the point-values representation of polynomial from coefficient representation
 // utilise complex (2n)th roots of unity to get the  point-values representation of polynomial.
-// if invert=true, then it computes inverse fourier transform, which is computes coefficient representation from point-values representation
+// if invert=true, then it computes inverse fast fourier transform, which is computes coefficient representation from point-values representation
 // O(nlgn) time
 void fft(vector<cd> &a, bool invert)
 {
