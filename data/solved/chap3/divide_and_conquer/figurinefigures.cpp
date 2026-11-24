@@ -4,8 +4,8 @@ using namespace std;
 typedef long long ll;
 
 const int MAX_FIGURINE_WEIGHT = 60001;
-using cd = complex<double>;
-const double PI = acos(-1);
+using cd = complex<long double>;
+const long double PI = acos(-1);
 
 // code for fft below adapted from: https://cp-algorithms.com/algebra/fft.html
 // my ipad notes for fast fourier transform: https://drive.google.com/file/d/1Pl6qEFNHvDfuBrbxxZSYLx5VqseJ__wi/view?usp=sharing
@@ -13,6 +13,7 @@ const double PI = acos(-1);
 // fft fast fourier transform
 // computes the point-values representation of polynomial from coefficient representation
 // utilise complex (2n)th roots of unity to get the  point-values representation of polynomial.
+// if invert=true, then it computes inverse fourier transform, which is computes coefficient representation from point-values representation
 // O(nlgn) time
 void fft(vector<cd> &a, bool invert)
 {
@@ -31,7 +32,7 @@ void fft(vector<cd> &a, bool invert)
     fft(a0, invert);
     fft(a1, invert);
 
-    double ang = 2 * PI / n * (invert ? -1 : 1);
+    long double ang = 2 * PI / n * (invert ? -1 : 1);
     cd w(1), wn(cos(ang), sin(ang));
     for (int i = 0; 2 * i < n; i++)
     {
@@ -95,11 +96,14 @@ int main()
         figurines_weight_freq[f_w]++;
     }
 
-    auto figurines_weight_freq_pow_2 = fft_multiply(figurines_weight_freq, figurines_weight_freq);       // O(nlgn)
-    auto figurines_weight_freq_pow_3 = fft_multiply(figurines_weight_freq_pow_2, figurines_weight_freq); // O(nlgn)
-    auto figurines_weight_freq_pow_4 = fft_multiply(figurines_weight_freq_pow_3, figurines_weight_freq); // O(nlgn)
+    // TLE
+    // auto figurines_weight_freq_pow_2 = fft_multiply(figurines_weight_freq, figurines_weight_freq);       // O(nlgn)
+    // auto figurines_weight_freq_pow_3 = fft_multiply(figurines_weight_freq_pow_2, figurines_weight_freq); // O(nlgn)
+    // auto figurines_weight_freq_pow_4 = fft_multiply(figurines_weight_freq_pow_3, figurines_weight_freq); // O(nlgn)
+    auto figurines_weight_freq_pow_2 = fft_multiply(figurines_weight_freq, figurines_weight_freq);             // O(nlgn), n=MAX_FIGURINE_WEIGHT
+    auto figurines_weight_freq_pow_4 = fft_multiply(figurines_weight_freq_pow_2, figurines_weight_freq_pow_2); // O(nlgn)
 
-    double expected_weight = 0.0;
+    long double expected_weight = 0.0;
     ll number_of_distinct_weights = 0;
     ll max_weight = 0;
     ll min_weight = 1e9;

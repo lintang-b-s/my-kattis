@@ -10,6 +10,7 @@ const double PI = acos(-1);
 // fft fast fourier transform
 // computes the point-values representation of polynomial from coefficient representation
 // utilise complex (2n)th roots of unity to get the  point-values representation of polynomial.
+// if invert=true, then it computes inverse fourier transform, which is computes coefficient representation from point-values representation
 // O(nlgn) time
 void fft(vector<cd> &a, bool invert)
 {
@@ -123,7 +124,7 @@ int main()
         }
 
         // auto c = naive_polynomials_multiplication(a, b); // O(n^2) TLE
-        auto c = fft_multiply(a, b);
+        auto c = fft_multiply(a, b); // O(nlgn)
         int c_degree_bound = (na + 1) + (nb + 1) - 1;
         cout << c_degree_bound - 1 << endl;
         for (int i = 0; i < c_degree_bound; i++)
